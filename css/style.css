@@ -104,6 +104,22 @@
     font-weight: 500;
 }
 
+.home .home-content a{
+    display: inline-block;
+    background: rgb(97, 87, 231);
+    color: #fff;
+    font-size: 25px ;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(97, 87, 231);
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+    color:rgb(97, 87, 231);
+    background: none;
+}
 /* responsive media query */
 @media (max-width: 1104px){
     .home .max-width{
@@ -158,6 +174,29 @@
     
     .home .home-content .text-3{
         font-size: 35px;
+    }
+
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+}
+
+@media (max_width:690px){
+    .max-width{
+        padding: 0 23px;
+    }
+
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+
+    .home .home-content a{
+        font-size: 20px;
     }
 }
 
