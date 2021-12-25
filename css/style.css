@@ -22,6 +22,7 @@
     background-size: cover;
     transform:translate(-50%,-50%);
     pointer-events: none;
+    z-index: 100;
 }
 
 /* navbar style */
@@ -376,6 +377,12 @@ section .title::after{
     .about .about-content .left img{
         height: 350px;
         width: 350px;
+    }
+
+    .tools .tools-content .card .text{
+        font-size: 15px;
+        font-weight: 500;
+        margin: 10px 0 7px 0;
     }
 }
 
