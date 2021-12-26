@@ -22,7 +22,7 @@
     background-size: cover;
     transform:translate(-50%,-50%);
     pointer-events: none;
-    z-index: 100;
+    z-index: 1000;
 }
 
 /* navbar style */
@@ -140,7 +140,7 @@ section{
     padding: 100px 0;
 }
 
-.about, .tools, .skills{
+.about, .tools, .skills, .projects{
     font-family: 'Poppins',sans-serif;
 }
 
@@ -239,16 +239,18 @@ section .title::after{
 }
 
 /* tools section style*/
-.tools{
+.tools, .projects{
     color: #fff;
     background: #111;
 }
 
-.tools .title::before{
+.tools .title::before,
+.projects .title::before{
     background: #fff;
 }
  
-.tools .title::after{
+.tools .title::after,
+.projects .title::after{
     background: #111;
     content: "what i use";
 }
@@ -364,6 +366,77 @@ section .title::after{
 
 .skills-content .right .html::before{
     width: 90%;
+}
+
+/* projects section style*/
+.projects .title::after{
+    content: "what i have done";
+}
+
+.projects .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition:all 0.3s ease;
+}
+
+.projects .carousel .card:hover{
+    background: rgb(97, 87, 231);
+}
+
+.projects .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.projects .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+
+.projects .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.projects .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgb(97, 87, 231);
+}
+
+.projects .carousel .card:hover img{
+    border-color:#fff;
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot{
+    height: 13px;
+    width: 14px;
+    margin:0 5px;
+    outline: none!important;
+    border-radius:50%;
+    border:2px solid rgb(97, 87, 231)!important;
+}
+
+.owl-dot.active{
+    width:35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover{
+    background:rgb(97, 87, 231)!important;
 }
 
 /* responsive media query */
