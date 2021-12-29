@@ -54,6 +54,8 @@ setInterval(()=>{
 },10)
 
 
+
+
 // scroll
 $(document).ready(function(){
     $(window).scroll(function(){
@@ -111,3 +113,5 @@ $(document).ready(function(){
         }
     });
 });
+
+

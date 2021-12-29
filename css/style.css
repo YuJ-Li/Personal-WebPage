@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -36,12 +37,16 @@ html{
     z-index: 999;
     padding: 30px 0;
     font-family: 'Ubuntu',sans-serif;
-    transition: all 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.5s ease;
 }
 
 .navbar.sticky{
     padding: 15px 0;
-    background:rgb(97, 87, 231);
+    opacity: 1;
+    pointer-events: all;
+    background:transparent;
 }
 .navbar .max-width{
     display:flex;
@@ -49,18 +54,18 @@ html{
     justify-content: space-between;
 }
 .navbar .logo a{
-    color: #fff;
+    color: #111;
     font-size: 35px;
     font-weight: 600;
 }
 
 .navbar .logo a span{
-    color: rgb(97, 87, 231);
+    color: crimson;
     transition: all 0.3s ease;
 }
 
 .navbar.sticky .logo a span{
-    color: #fff;
+    color: crimson;
 }
 
 .navbar .menu li{
@@ -69,7 +74,7 @@ html{
 }
 .navbar .menu li a{
     display: block;
-    color: #fff;
+    color: #111;
     font-size: 18 px;
     font-weight: 500;
     margin-left: 25px;
@@ -119,12 +124,15 @@ html{
 /* home section style */
 .home{
     display: flex;
-    background: url("/assets/background.jpg") no-repeat center;
+    background: rgb(76,82,82);
+    background: linear-gradient(180deg, rgba(76,82,82,0.8167053364269141) 0%, rgba(255,255,255,1) 100%);
     background-size: cover;
     height:100vh;
-    color: #fff;
+    color: #111;
     min-height: 500px;
     font-family: 'Ubuntu',sans-serif;
+
+    width: 100%;
 }
 
 .home .max-width{
@@ -151,22 +159,137 @@ html{
     font-weight: 500;
 }
 
-.home .home-content a{
-    display: inline-block;
-    background: rgb(97, 87, 231);
-    color: #fff;
-    font-size: 25px ;
-    padding: 12px 36px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid rgb(97, 87, 231);
-    transition: all 0.3s ease;
+.home .home-content {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.home .home-content .column.left{
+   
+    width: 60%;
+}
+.home .home-content .column.right{
+
+    width: 40%;
 }
 
-.home .home-content a:hover{
-    color:rgb(97, 87, 231);
-    background: none;
+.drop{
+    position: relative;
+    width:150px;
+    height:150px;
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+    15px 25px 10px rgba(0, 0, 0, 0.05),
+    15px 20px 20px rgba(0, 0, 0, 0.05),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.09);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 500ms ease;
 }
+
+.drop:hover{
+    transform: scale(1.1);
+}
+
+.drop::before{
+    content: '';
+    position: absolute;
+    top: 23.33%;
+    left: 16.67%;
+    width: 13.33%;
+    height: 13.33%;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.drop::after{
+    content: '';
+    position: absolute;
+    top: 16.67%;
+    left: 33.33%;
+    width: 6.67%;
+    height: 6.67%;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.drop.one{
+    width:100px;
+    height:100px;
+    margin-left: 150%;
+}
+.drop.one span{
+    position: absolute;
+    margin-top: 45%;
+    padding-left: 27%;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+}
+
+.drop.two{
+    width:120px;
+    height:120px;
+    margin-left: 100%;
+}
+.drop.two span{
+    position: absolute;
+    margin-top: 45%;
+    padding-left: 35%;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+}
+
+.drop.three{
+    width:175px;
+    height:175px;
+    margin-left: 175%;
+}
+.drop.three span{
+    position: absolute;
+    margin-top: 45%;
+    padding-left: 35%;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #111;
+}
+
+.drop.four{
+    width:200px;
+    height:200px;
+    margin-left: 75%;
+    margin-top: -30%;
+}
+.drop.four span{
+    position: absolute;
+    margin-top: 40%;
+    padding-left: 20%;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    color: #111;
+}
+
+.drop.five{
+    width:120px;
+    height:120px;
+    margin-left: 150%;
+}
+.drop.five span{
+    position: absolute;
+    margin-top: 45%;
+    padding-left: 27%;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+}
+
 
 /* similar sections (about, tools) style */
 section{
@@ -221,6 +344,7 @@ section .title::after{
 }
 
 /* about section style */
+
 .about .title::after{
     content: "who i am";
 }
@@ -611,6 +735,7 @@ section .title::after{
 @media (max-width: 1300px){
     .home .max-width{
         margin-left: 0px;
+
     }
 }
 
@@ -753,4 +878,6 @@ section .title::after{
     }
 
 }
+
+
 
