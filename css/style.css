@@ -18,6 +18,7 @@ html{
 }
 
 
+
 /* mouse effect */
 .mouse{
     width: 50px;
@@ -171,11 +172,12 @@ html{
     width: 60%;
 }
 .home .home-content .column.right{
-
+    pointer-events: none;
     width: 40%;
 }
 
 .drop{
+    pointer-events: all;
     position: relative;
     width:150px;
     height:150px;
@@ -186,6 +188,7 @@ html{
     border-radius: 50%;
     cursor: pointer;
     transition: transform 500ms ease;
+
 }
 
 .drop:hover{
@@ -219,9 +222,17 @@ html{
     height:100px;
     margin-left: 150%;
 }
+
+.drop.one i{
+    position: absolute;
+    margin-top: 25%;
+    padding-left: 37%;
+    color: #111;
+    font-size: 25px;
+}
 .drop.one span{
     position: absolute;
-    margin-top: 45%;
+    margin-top: 55%;
     padding-left: 27%;
     font-family: 'Ubuntu',sans-serif;
     font-size: 15px;
@@ -234,12 +245,20 @@ html{
     height:120px;
     margin-left: 100%;
 }
+
+.drop.two i{
+    position: absolute;
+    margin-top: 25%;
+    padding-left: 42%;
+    color: #111;
+    font-size: 25px;
+}
 .drop.two span{
     position: absolute;
-    margin-top: 45%;
-    padding-left: 35%;
+    margin-top: 55%;
+    padding-left: 33%;
     font-family: 'Ubuntu',sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 700;
     color: #111;
 }
@@ -249,9 +268,20 @@ html{
     height:175px;
     margin-left: 175%;
 }
+
+
+
+.drop.three i{
+    position: absolute;
+    margin-top: 25%;
+    padding-left: 42%;
+    color: #111;
+    font-size: 25px;
+}
+
 .drop.three span{
     position: absolute;
-    margin-top: 45%;
+    margin-top: 55%;
     padding-left: 35%;
     font-family: 'Ubuntu',sans-serif;
     font-size: 25px;
@@ -265,9 +295,17 @@ html{
     margin-left: 75%;
     margin-top: -30%;
 }
+
+.drop.four i{
+    position: absolute;
+    margin-top: 25%;
+    padding-left: 42%;
+    color: #111;
+    font-size: 35px;
+}
 .drop.four span{
     position: absolute;
-    margin-top: 40%;
+    margin-top: 55%;
     padding-left: 20%;
     font-family: 'Ubuntu',sans-serif;
     font-size: 35px;
@@ -280,9 +318,17 @@ html{
     height:120px;
     margin-left: 150%;
 }
+
+.drop.five i{
+    position: absolute;
+    margin-top: 25%;
+    padding-left: 37%;
+    color: #111;
+    font-size: 25px;
+}
 .drop.five span{
     position: absolute;
-    margin-top: 45%;
+    margin-top: 55%;
     padding-left: 27%;
     font-family: 'Ubuntu',sans-serif;
     font-size: 15px;
@@ -764,6 +810,15 @@ section .title::after{
 }
 @media (max-width: 947px){
 
+    .navbar{
+        pointer-events: all;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .drop{
+        display: none;
+    }
+
     .menu-btn{
         display: block;
         z-index: 999;
@@ -811,10 +866,6 @@ section .title::after{
         padding: 10px 30px;
     }
 
-    .max-width{
-        max-width:800px;
-        
-    }
 
     .about .about-content .column{
         width: 50%;
