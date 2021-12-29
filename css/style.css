@@ -7,7 +7,14 @@
     text-decoration: none;
 }
 
-
+#particles-js{
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    width: 100%;
+}
 
 html{
     scroll-behavior: smooth;
@@ -190,6 +197,7 @@ html{
     border-radius: 50%;
     cursor: pointer;
     transition: transform 500ms ease;
+    z-index: 999;
 
 }
 
