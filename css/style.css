@@ -629,6 +629,16 @@ section .title::after{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+
+}
+
+.projects .carousel a:link{
+    color:#fff
+
+}
+
+.projects .carousel a:visited{
+    color: #fff;
 }
 
 .projects .carousel .card img{
