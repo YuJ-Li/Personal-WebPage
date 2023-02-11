@@ -34,7 +34,7 @@ html{
     width: 50px;
     height:50px;
     position: absolute;
-    background: url(/assets/goat.gif) ;
+    background: url(../assets/goat.gif) ;
     background-size: cover;
     transform:translate(-50%,-50%);
     pointer-events: none;
@@ -137,17 +137,16 @@ html{
     display: flex;
     background: rgb(76,82,82);
     background: linear-gradient(180deg, rgba(76,82,82,0.8167053364269141) 0%, rgba(255,255,255,1) 100%);
-    background-size: cover;
+    background-size: fill;
     height:100vh;
     color: #111;
     min-height: 500px;
     font-family: 'Ubuntu',sans-serif;
-
     width: 100%;
 }
 
 .home .max-width{
-    margin: auto 0 auto 40px;
+    margin: auto 0 auto 40;
 }
 
 .home .home-content .text-1{
@@ -237,7 +236,7 @@ html{
 .drop.one i{
     position: absolute;
     margin-top: 25%;
-    padding-left: 37%;
+    padding-right: 37%;
     color: #111;
     font-size: 25px;
 }
@@ -471,7 +470,7 @@ section .title::after{
 }
 
 .tools .tools-content .card{
-    width: calc(25% - 20px);
+    width: calc(20% - 20px);
     background: #333;
     text-align: center;
     border-radius: 6px;
